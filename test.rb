@@ -18,3 +18,6 @@ aw.set 'Ivan'
 browser.element(:class => "jfDropdown-chipContainer").click
 browser.li(:text => 'Name of the first pet').click
 browser.element(:class => "jfInput-button forSubmit form-submit-button u-right").click
+if browser.element(:id => 'jfThankYou-type-svg').exists?
+then browser.close
+end
