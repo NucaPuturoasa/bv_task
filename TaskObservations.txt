@@ -1,0 +1,22 @@
+The code in the ruby files has been written and executed in Visual Studio Code. 
+This was the most recomended ide appart from Ruby Mine (i didn't want to use this was as it was paid).
+By far the most exhausting thing to achieve was to corectly configure the ide with all the extensions. Unlike rubyMine, this one comes quite clean and you add what you need for your desired programing language. But after spending about 4 hours just to make the test.rb file run, i undestood why specific programs like rubyMine exist.
+Challenges when writing the script.
+    First part was navigating the from. While xpaths could be used and worked just to navigate, activate a dropdown and click submit worked, the solution, to put it short, was not looking ok.
+        This also came with a drawback that some of the divs where changing when adding elements to some of the cards, making it usless after the first 1 or 2 cards. The solution was to used ids and more specific selectors instead. Even with this, some of them still aren't the best.
+I discovered that basic key comands worked on the form and when with these. in some forms, arrow_left/arrow_right worked, if there was no text input field highlighted but in all pages, pressing enter was the universal one.
+The sleep time were added as the transition was to fast and some of the elements were not properly loading and i couldn't make the method: browser.element(id: 'something').wait_until(&:something?) to work. No idea why, so some delays where added. not efficient but got the job done.
+With navigations somewhat sorted and having a program that went from start to finish (just by activating one dropdown), it was time to add some actions to the cards, like adding text, doodle in the signature, value in the calendar and answer to the question.
+There are 2 things i would have liked to do but couldn't figure out how. 
+    1. activate the calendar from the icon and click on Today (this was the initial idea, as adding text into an input field is done everywhere else).
+    2. make a doodle or x in the signature by using click and hold.
+
+The final challenge was adding a logger so that there is an output from the script.
+    It took me a bit to learn what i needed and how to google for it, after this, it was just a 3 liner at the start of the script.
+
+Last of all, appologies for not creating more commits as i encountered some of the challenges above, i went from one problem to the solution in the same go and didn't document it as requested.
+
+Durring the interview i was asked to offer an estimation of how long it would take me to complete the assignmet. If i add all the hours from 0 knowledge to this last commit, it comes down to about 18 hours, giver or take a couple.
+When i started looking at the first youtube tutorial, the presenter made it looks very easy (partialy rubyMine's credit) and i figured that it would be a walk in the park. Boy was i wrong on that account. Overall, i think the combo of ruby+watir makes it very easy to get started, syntax is pretty forgiving and if you have any type-o the terminal highlights them, like this one:
+2020-08-02 22:34:23 WARN Watir [DEPRECATION] ["selector_parameters"] Using ordered parameters to locate elements (:css, "#input_9") is deprecated. Use {css: "#input_9"} instead.
+There were multiple video turorials on creating cucumber tests with feature files that had ruby methods runing behind them, this is a much nicer way of generating an output, that doesn't look like the log file i added (changing the log level from debug to info doesn't make it look more humane, so a diffrent solution might be better).

@@ -1,6 +1,6 @@
 require 'watir'
 require 'logger'
-Selenium::WebDriver.logger.level = :debug
+Selenium::WebDriver.logger.level = :info
 Selenium::WebDriver.logger.output = 'selenium.log'
 browser = Watir::Browser.new :firefox
 browser.goto "https://form.jotform.com/201882323530347"
@@ -20,7 +20,7 @@ ln.set 'Doe'
 browser.send_keys :enter
 
 #Check if attach file exists, then move to next page, if element does not exist, close the browser
-if browser.element(:id => 'input_9').exists?
+if browser.element(css: '#input_9').exists?
     then browser.send_keys :enter
 else browser.close
 end

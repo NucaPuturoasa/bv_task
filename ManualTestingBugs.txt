@@ -1,0 +1,14 @@
+1. After clicking on next on the start form, the card progress bar is not shown on the first card.
+    It will appear on the 2nd card and will remain in place when moving back to the first one.
+2. Input fields are not cleared when the page is refreshed while on any of the cards. On the signature page, the doodle is no longer visibile, but the value is still present unpon inspecting the element.
+3. There is not text validation on the name fields. Any alphanumerical and symbol character can be introduced.
+4. There is no text value limit on any of the text input fields.
+5. On the calendar page, click on the calendar icon, this will popup the calendar in the center of the page.
+    Click just outside above the calendar icon. The calendar will change format and be displayed in the top left corner of the window.
+6. Observation: if you input incorrect months and days, the calculator will turn them to the next higher value
+    eg: if you input 13-01-2000, the calculator will convert it to 01-01-2001, turning 13 into 1+12.
+    The same logic is used for day. if month is 1 and day is 32, then month will become 2 and day will be 1.
+7. The entire form can be submitted by just selecting a value in the Security question dropdown. - Not a very efficient form.
+8. Unless you have a 4k display, clicking on show all in the progress bar will not show all the cards in the form.
+9. When hovering over the bulletpoints in the progress bar they will display the name of the card, which is inherited from the title.
+    On card 2, there is not title, thus hovering over it will only show the value:  "2."
