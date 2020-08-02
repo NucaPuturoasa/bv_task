@@ -1,4 +1,7 @@
 require 'watir'
+require 'logger'
+Selenium::WebDriver.logger.level = :debug
+Selenium::WebDriver.logger.output = 'selenium.log'
 browser = Watir::Browser.new :firefox
 browser.goto "https://form.jotform.com/201882323530347"
 
@@ -33,7 +36,7 @@ sigInp = browser.hidden(:id => "input_7")
 clear = browser.element(xpath: "//span[text()='Clear']")
 sigVal = sigInp.value
 if sigVal != ''
-    then browser.send_keys :arrow_right
+    then browser.send_keys :enter
 else clear.click
 end
 
@@ -55,4 +58,3 @@ sleep(5)
 if browser.element(:id => 'jfThankYou-type-svg').exists?
 then browser.close
 end
-
